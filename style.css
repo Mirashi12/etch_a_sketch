@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(34, 32, 32);
+}
+
+.title {
+    color: antiquewhite;
+}
+
+.drawing-area {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    max-height: 500px;
+}
+ 
+.empty-square {
+    display: flex;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+
+#drawing-square {
+    background-color: black;
+}

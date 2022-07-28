@@ -9,11 +9,13 @@ body {
     color: antiquewhite;
 }
 
+#btn-grid {
+    margin-bottom: 100px;
+}
+
 .drawing-area {
     display: flex;
     flex-wrap: wrap;
-    max-width: 500px;
-    max-height: 500px;
 }
  
 .empty-square {

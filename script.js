@@ -19,7 +19,7 @@ function createGrid () {
             grid_container.appendChild(divs);
             divs.setAttribute('class', 'empty-square');
             divs.addEventListener('mouseover', function(){ // Creates a function which will turn the div elements black on mouseover
-                divs.setAttribute('id', 'drawing-square');
+                divs.setAttribute('id', 'black-square');
             });
         }
     } else {
@@ -27,4 +27,45 @@ function createGrid () {
     }
 }
 
+function changeColor () {
+    if (this.color == 'blue') {
+        let existing_grid = document.querySelectorAll('.empty-square');
+        for (let i = 0; i <= existing_grid.length; i++) {
+            existing_grid[i].addEventListener('mouseover', function(){ // Creates a function which will turn the div elements black on mouseover
+                existing_grid[i].removeAttribute('id'); // Triggers a type error, not sure why
+                existing_grid[i].setAttribute('id', 'blue-square');
+            });
+        }
+
+    } else if (this.color == 'red') {
+        let existing_grid = document.querySelectorAll('.empty-square');
+        for (let i = 0; i <= existing_grid.length; i++) {
+            existing_grid[i].addEventListener('mouseover', function(){ // Creates a function which will turn the div elements black on mouseover
+                existing_grid[i].removeAttribute('id');
+                existing_grid[i].setAttribute('id', 'red-square');
+            });
+        }
+    } else if (this.color == 'black') {
+        let existing_grid = document.querySelectorAll('.empty-square');
+        for (let i = 0; i <= existing_grid.length; i++) {
+            existing_grid[i].addEventListener('mouseover', function(){ // Creates a function which will turn the div elements black on mouseover
+                existing_grid[i].removeAttribute('id');
+                existing_grid[i].setAttribute('id', 'black-square');
+            });
+        }
+    }
+}
+
 btn_grid.addEventListener('click', createGrid);
+
+let btn_red = document.querySelector('#btn-red');
+btn_red.color = 'red' ;
+btn_red.addEventListener('click', changeColor);
+
+let btn_blue = document.querySelector('#btn-blue');
+btn_blue.color = 'blue' ;
+btn_blue.addEventListener('click', changeColor);
+
+let btn_black = document.querySelector('#btn-black');
+btn_black.color = 'black' ;
+btn_black.addEventListener('click', changeColor);

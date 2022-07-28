@@ -17,14 +17,25 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
- 
-.empty-square {
+
+.drawing-area div {
     display: flex;
-    background-color: white;
     width: 10px;
     height: 10px;
 }
+ 
+.empty-square {
+    background-color: white;
+}
 
-#drawing-square {
+#black-square {
     background-color: black;
+}
+
+#blue-square {
+    background-color: blue;
+}
+
+#red-square {
+    background-color: red;
 }
